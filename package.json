@@ -1,0 +1,23 @@
+{
+    "name": "sass-project",
+    "version": "1.0.0",
+    "description": "sass portfolio project",
+    "main": "index.js",
+    "scripts": {
+        "watch:sass": "node-sass sass/main.scss css/style.css -w",
+        "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+        "concat:css": "concat -o css/style.concat.css css/style.comp.css",
+        "compress:css": "node-sass css/style.concat.css css/style.css --output-style compressed",
+        "build:css": "npm-run-all compile:sass concat:css compress:css"
+    },
+    "author": "Imran Shah",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^10.2.5",
+        "concat": "^1.0.3",
+        "node-sass": "^5.0.0",
+        "npm-run-all": "^4.1.5",
+        "postcss-cli": "^8.3.1"
+    },
+    "dependencies": {}
+}
